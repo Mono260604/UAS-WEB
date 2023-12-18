@@ -6,7 +6,13 @@ export default {
     'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
-    extend: {},
+     colors:{
+      transparent: 'transparent',
+      current: 'currentColor',
+      'navBar' : '#ffff',
+      'footBar': '#AC2B61',
+      'product': '#AED79F',
+    },
   },
   plugins: [],
 }

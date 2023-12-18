@@ -8,7 +8,10 @@ function App() {
       <div>
         <NavBar />
       </div>
-      <a>Hello World!</a>
+      <div className="
+      bg-footBar">
+        INDEX
+      </div>
     </>
   );
 }
