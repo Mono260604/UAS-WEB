@@ -12,18 +12,26 @@ const NavBar = () => {
         <div className="flex items-center justify-end w-full md:w-auto md:order-1">
           <ul className="flex p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
             <li type="button" className="px-1 py-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="16"
-                width="16"
-                viewBox="0 0 512 512"
-                className="h-6 w-6"
-              >
-                <path
-                  fill="#ac2b61"
-                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              <form action="" className="relative w-max mx-auto">
+                <input
+                  type="search"
+                  className="relative peer z-20 bg-transparent h-6 w-6 rounded-full cursor-pointer outline-none
+                             pl-12
+                             focus:w-full focus:border-bg-body focus:pl-16 focus:pr-4 transition-all duration-300"
                 />
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 512 512"
+                  className="absolute inset-y-0  my-auto h-8 w-12 px-3.5 border-r border-transparent peer-focus:border-bg-body transition-all duration-300"
+                >
+                  <path
+                    fill="#ac2b61"
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                  />
+                </svg>
+              </form>
             </li>
             <li type="button" className="px-1 py-2">
               <svg

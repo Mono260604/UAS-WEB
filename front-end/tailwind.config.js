@@ -13,6 +13,7 @@ export default {
       'footBar': '#AC2B61',
       'product': '#AED79F',
       'body':'#DBB9C7',
+      'searchBar':'#6c8ca4',
     },
   },
   plugins: [],
