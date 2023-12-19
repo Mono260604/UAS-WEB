@@ -1,16 +1,18 @@
 import React from "react";
 import "./App.css";
-import NavBar from "./NavBar"; // Perhatikan penggunaan huruf kapital pada impor
+import NavBar from "./NavBar"; 
+import Content from "./content";
 
 function App() {
   return (
     <>
-      <div>
-        <NavBar />
-      </div>
-      <div className="
-      bg-footBar">
-        INDEX
+      <div className="bg-body">
+        <div>
+          <NavBar />
+        </div>
+        <div>
+          <Content />
+        </div>
       </div>
     </>
   );

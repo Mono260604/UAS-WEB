@@ -12,6 +12,7 @@ export default {
       'navBar' : '#ffff',
       'footBar': '#AC2B61',
       'product': '#AED79F',
+      'body':'#DBB9C7',
     },
   },
   plugins: [],
