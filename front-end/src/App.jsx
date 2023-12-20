@@ -6,7 +6,7 @@ import Content from "./content";
 function App() {
   return (
     <>
-      <div className="bg-body">
+      <div className="w-full h-full">
         <div>
           <NavBar />
         </div>
