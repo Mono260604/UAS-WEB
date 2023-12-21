@@ -13,6 +13,7 @@ export default {
       'product': '#AED79F',
       'body':'#DBB9C7',
       'searchBar':'#6c8ca4',
+      'text':'#A96682',
     },
   },
   plugins: [],
