@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import logo from "./assets/judul.png";
 
 const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if(window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
+  
   return (
-    <nav className="bg-gradient-to-b from-navBar from-55%  to-body
-     fixed w-full z-50 top-0 start-0 pb-4
-     ">
+    <nav
+      className={`${
+        isScrolled
+          ? "bg-navBar pb-1"
+          : "bg-gradient-to-b from-navBar from-55%  to-body"
+      } fixed w-full z-50 top-0 start-0 pb-4`}
+    >
       <div className="max-w-scree-xl flex items-center justify-between mx-auto">
         <div>
           <a
@@ -52,23 +75,23 @@ const NavBar = () => {
                 JOIN
               </button>
             </li>
-              <li
-                type="button"
-                className="px-4 sm:pr-2 sm:ml-4  py-2 border-s border-1 border-solid border-searchBar mb-2"
+            <li
+              type="button"
+              className="px-4 sm:pr-2 sm:ml-4  py-2 border-s border-1 border-solid border-searchBar mb-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="16"
+                width="16"
+                viewBox="0 0 576 512"
+                className="h-6 w-6"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 576 512"
-                  className="h-6 w-6"
-                >
-                  <path
-                    fill="#ac2b61"
-                    d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
-                  />
-                </svg>
-              </li>
+                <path
+                  fill="#ac2b61"
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                />
+              </svg>
+            </li>
           </ul>
         </div>
       </div>
