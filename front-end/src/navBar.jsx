@@ -26,7 +26,7 @@ const NavBar = () => {
     <nav
       className={`${
         isScrolled
-          ? "bg-navBar pb-1"
+          ? "bg-navBar pb-0"
           : "bg-gradient-to-b from-navBar from-55%  to-body"
       } fixed w-full z-50 top-0 start-0 pb-4`}
     >
